@@ -5,7 +5,6 @@ import Category from './components/Category.jsx';
 import './App.css';
 
 function App() {
-  const getQuote = 'Chuck Norris can divide by zero.'
   return (
     <div className="App">
       <header className="App-header">

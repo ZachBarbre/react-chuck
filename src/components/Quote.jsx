@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 
 class Quote extends Component {
     state = {
-        quote: 'Chuck Norris can divide by zero'
+        quote: 'Fetching a quote...'
+    }
+
+    componentDidMount() {
+
+        setTimeout(() => {
+            this.setState({
+                quote: "Chuck Norris hates your rules"
+            })
+
+        }, 2000);
+
     }
 
     render() {
