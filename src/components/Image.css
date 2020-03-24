@@ -1,0 +1,11 @@
+.wrapper-image {
+    display: flex;
+    margin: auto;
+    width: 50%;
+  }
+  
+  .wrapper-image img {
+    border-radius: 50%;
+    height: auto;
+    width: 100%;
+  }

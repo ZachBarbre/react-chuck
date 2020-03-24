@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import Quote from './components/Quote.jsx';
+import Image from './components/Image.jsx';
 import './App.css';
 
 function App() {
+  const getQuote = 'Chuck Norris can divide by zero.'
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Image />
+      <Quote quote={getQuote}/>
     </div>
   );
 }
