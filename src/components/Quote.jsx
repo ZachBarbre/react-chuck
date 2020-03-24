@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 class Quote extends Component {
+    state = {
+        quote: 'Chuck Norris can divide by zero'
+    }
+
     render() {
-        const { quote } = this.props
+        const { quote } = this.state;
 
         return (
             <div>
