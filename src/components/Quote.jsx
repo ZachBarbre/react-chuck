@@ -5,15 +5,19 @@ class Quote extends Component {
         quote: 'Fetching a quote...'
     }
 
-    componentDidMount() {
-
-        setTimeout(() => {
+    async componentDidMount() {
+        try {
+            const response = await fetch(`https://api.chucknorris.io/jokes/random?category=dev`)
+            const data = await response.json();
+            console.log('data is', data.value);
             this.setState({
-                quote: "Chuck Norris hates your rules"
+                quote: data.value
             })
-
-        }, 2000);
-
+        } catch (error) {
+            this.setState(
+              { quote: error.message }
+            )
+        }
     }
 
     render() {
@@ -21,7 +25,7 @@ class Quote extends Component {
 
         return (
             <div>
-                <p>{quote} </p>
+                <p>{quote}</p>
             </div>
         )
     }
